@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      "backgroundImage": {
+        "jungle-img": "url('^assets/img/olivier-guillard-FKJgBUDoVC0-unsplash.jpg')"
+      }
+    },
   },
   plugins: [],
 }
