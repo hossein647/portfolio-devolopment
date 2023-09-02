@@ -2,10 +2,13 @@
     <div class="products w-2/5">
         <ng-container *ngFor="let product of products; let i = index">
             <div 
-                class="w-full item" 
+                class="w-full item relative overflow-hidden" 
                 [ngClass]="[product.color]" 
                 [ngStyle]="{'height': height}" 
                 #productsElement>
+                <div class="rectangle absolute w-96 h-96 border-[4px] rounded-full -top-40 -left-32 z-50 overflow-hidden">
+                    <div class="bg-cat-img w-full h-full bg-contain"></div>
+                </div>
             </div>
         </ng-container>
     </div>
