@@ -21,9 +21,9 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.products = [
-      { name: 'project 1', color: 'bg-red-500' },
-      { name: 'project 2', color: 'bg-black' },
-      { name: 'project 3', color: 'bg-purple-500' },
+      { name: 'project 1', color: 'bg-first' },
+      { name: 'project 2', color: 'bg-second' },
+      { name: 'project 3', color: 'bg-third' },
     ];
     this.height = 100 / this.products.length + '%';
   }
