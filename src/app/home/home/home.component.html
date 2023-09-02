@@ -1,8 +1,11 @@
 <div class="min-h-screen flex w-full">
     <div class="products w-2/5">
         <ng-container *ngFor="let product of products; let i = index">
-            <div class="w-full item" [ngClass]="product.color" [ngStyle]="{'height': height}" #productsElement>
-                {{product.name}}
+            <div 
+                class="w-full item" 
+                [ngClass]="[product.color]" 
+                [ngStyle]="{'height': height}" 
+                #productsElement>
             </div>
         </ng-container>
     </div>
