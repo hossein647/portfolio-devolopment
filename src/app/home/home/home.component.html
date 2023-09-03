@@ -18,14 +18,14 @@
                 </div>
                 <div class="description p-8 pt-16">
                     <h1 class="title text-4xl text-white font-bold  ">{{product.title}}</h1>
-                    <div class="reference flex absolute bottom-20 left-72">
+                    <div class="reference flex absolute bottom-6 left-56">
                         <div 
                             class="
                                 icons
-                                w-[24px] h-[24px] 
+                                w-[32px] h-[32px] 
                                 hover:scale-125 hover:cursor-pointer 
                                 transition-transform duration-300 ease-in-out 
-                                mx-4"
+                                mx-[8px]"
                             *ngFor="let icon of product.icons; let j = index"
                             [ngClass]="[icon, j === 1 ? 'mx-1' : '']">
                         </div>
