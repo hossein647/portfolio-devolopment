@@ -8,7 +8,7 @@ import { Component, ElementRef, OnInit, QueryList, Renderer2, ViewChildren } fro
 })
 export class HomeComponent {
 
-  products: { name: string, color: string }[];
+  products: { title: string, color: string, icons: string[] }[];
   height: string;
 
   @ViewChildren('productsElement') productsElement: QueryList<ElementRef>;
@@ -20,11 +20,40 @@ export class HomeComponent {
 
 
   ngOnInit(): void {
-    this.products = [
-      { name: 'project 1', color: 'bg-first' },
-      { name: 'project 2', color: 'bg-second' },
-      { name: 'project 3', color: 'bg-third' },
-    ];
+    this.initData();
     this.height = 100 / this.products.length + '%';
+  }
+
+
+  initData() {
+    this.products = [
+      {
+        title: 'سفارش غذا',
+        color: 'bg-first',
+        icons: [
+          'bg-github-img',
+          'bg-magnifying-img',
+          'bg-information-img'
+        ]
+      },
+      {
+        title: 'ادمین پنل (تجاری)',
+        color: 'bg-second',
+        icons: [
+          'bg-github-img',
+          'bg-magnifying-img',
+          'bg-information-img'
+        ]
+      },
+      {
+        title: 'بلاگ برنامه نویسی',
+        color: 'bg-third',
+        icons: [
+          'bg-github-img',
+          'bg-magnifying-img',
+          'bg-information-img'
+        ]
+      },
+    ];
   }
 }
