@@ -1,18 +1,40 @@
 <div class="min-h-screen flex w-full">
-    <div class="products w-2/5">
+    <div class="products w-1/2">
         <ng-container *ngFor="let product of products; let i = index">
             <div 
                 class="w-full item relative overflow-hidden" 
                 [ngClass]="[product.color]" 
                 [ngStyle]="{'height': height}" 
                 #productsElement>
-                <div class="rectangle absolute w-96 h-96 border-[4px] rounded-full -top-40 -left-32 z-50 overflow-hidden">
-                    <div class="bg-cat-img w-full h-full bg-contain"></div>
+                <div class="rectangle absolute w-96 h-96 border-[4px] rounded-full border-[#e7e7e7] -top-40 -left-32 z-50 overflow-hidden">
+                    <div 
+                        class="w-full h-full bg-contain brightness-75"
+                        [ngClass]="{
+                            'bg-order-food-img': i === 0,
+                            'bg-admin-panel-img': i === 1,
+                            'bg-cat-img': i === 2
+                        }">
+                    </div>
+                </div>
+                <div class="description p-8 pt-16">
+                    <h1 class="title text-4xl text-white font-bold  ">{{product.title}}</h1>
+                    <div class="reference flex absolute bottom-20 left-72">
+                        <div 
+                            class="
+                                icons
+                                w-[24px] h-[24px] 
+                                hover:scale-125 hover:cursor-pointer 
+                                transition-transform duration-300 ease-in-out 
+                                mx-4"
+                            *ngFor="let icon of product.icons; let j = index"
+                            [ngClass]="[icon, j === 1 ? 'mx-1' : '']">
+                        </div>
+                    </div>
                 </div>
             </div>
         </ng-container>
     </div>
-    <div class="profile w-3/5 relative">
+    <div class="profile w-1/2 relative">
         <app-profile></app-profile>
     </div>
 </div>
