@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/_interfaces/prodoct.interface';
 
 @Component({
@@ -11,6 +11,8 @@ export class ProductsComponent implements OnInit {
 
   products: Product[];
   height: string;
+  showDetailsProduct = false;
+  @Output() onShowDetails = new EventEmitter<{ index: number, product: HTMLDivElement}>()
 
   ngOnInit(): void {
     this.initData();
@@ -18,6 +20,10 @@ export class ProductsComponent implements OnInit {
   }
 
 
+  showDetails(index: number, product: HTMLDivElement) {
+    this.showDetailsProduct = true;
+    this.onShowDetails.emit({ index, product })
+  }
 
   initData() {
     this.products = [
