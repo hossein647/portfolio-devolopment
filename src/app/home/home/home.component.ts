@@ -8,7 +8,8 @@ import { Component} from '@angular/core';
 })
 export class HomeComponent {
 
-
+  showDetailsProduct = false;
+  
   constructor() { }
 
 
@@ -17,5 +18,8 @@ export class HomeComponent {
   }
 
 
+  onShowDetails(event: { index: number, product: HTMLDivElement}) {
+    this.showDetailsProduct = true
+  }
   
 }
