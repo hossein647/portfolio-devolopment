@@ -1,8 +1,12 @@
 <div class="min-h-screen flex w-full relative">
-    <div class="products w-1/2 absolute top-0 bottom-0 right-0">
-        <app-products></app-products>
+    <div 
+        class="products w-1/2 absolute top-0 bottom-0 right-0"
+        [ngClass]="{'translate-x-full transition-transform duration-400 ease-in-out': showDetailsProduct}">
+        <app-products (onShowDetails)="onShowDetails($event)"></app-products>
     </div>
-    <div class="profile w-1/2 bg-jungle-img bg-no-repeat bg-cover absolute bottom-0 left-0 top-0">
+    <div 
+        class="profile w-1/2 bg-jungle-img bg-no-repeat bg-cover absolute bottom-0 left-0 top-0"
+        [ngClass]="{'-translate-x-full transition-transform duration-400 ease-in-out': showDetailsProduct}">
         <app-profile></app-profile>
     </div>
 </div>
