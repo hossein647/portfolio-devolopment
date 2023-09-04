@@ -3,9 +3,13 @@
         class="
             product item 
             w-full
-            relative overflow-hidden
-            hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out" 
-        [ngClass]="[product.color]" [ngStyle]="{'height': height}"
+            relative overflow-hidden" 
+        [ngClass]="[
+                    product.color,
+                    showDetailsProduct === false ? 'hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out' : ''
+                ]" 
+        [ngStyle]="{'height': height}"
+        (click)="showDetails(i, productsElement)"
         #productsElement>
         <div class="
                 previews absolute w-96 h-96 
