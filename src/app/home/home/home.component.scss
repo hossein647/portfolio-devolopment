@@ -20,3 +20,14 @@
 .reference .icons {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(80deg) brightness(104%) contrast(102%);
 }
+
+.bg-github-img {
+    transform: translate(8.5rem, 2.5rem);
+}
+
+.bg-magnifying-img {
+    transform: translate(7rem, 5.5rem);
+}
+.bg-information-img {
+    transform: translate(4.5rem, 8.25rem);
+}
