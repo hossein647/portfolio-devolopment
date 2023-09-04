@@ -3,9 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    overflow: hidden;
+}
+
 body {
     min-height: 100%;
     direction: rtl;
     font-family: vazirmatn;
-    overflow: hidden;
 }
