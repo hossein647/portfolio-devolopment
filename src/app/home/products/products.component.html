@@ -2,14 +2,16 @@
     <div class="product w-full item relative overflow-hidden" [ngClass]="[product.color]" [ngStyle]="{'height': height}"
         #productsElement>
         <div class="
-                            previews absolute w-96 h-96 
-                            border-[4px] rounded-full  
-                            -top-40 -left-32 z-50 overflow-hidden">
-            <div class="w-full h-full bg-contain brightness-75" [ngClass]="{
-                                'bg-order-food-img': i === 0,
-                                'bg-admin-panel-img': i === 1,
-                                'bg-cat-img': i === 2
-                            }">
+                previews absolute w-96 h-96 
+                border-[4px] rounded-full  
+                -top-40 -left-32 z-50 overflow-hidden">
+            <div 
+                class="w-full h-full bg-contain brightness-75" 
+                [ngClass]="{
+                            'bg-order-food-img': i === 0,
+                            'bg-admin-panel-img': i === 1,
+                            'bg-cat-img': i === 2
+                        }">
             </div>
         </div>
         <div class="description p-8 pt-16 absolute -top-8 right-0 z-50">
