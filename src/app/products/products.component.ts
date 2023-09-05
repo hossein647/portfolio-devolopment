@@ -12,7 +12,7 @@ export class ProductsComponent implements OnInit {
   products: Product[];
   height: string;
   showDetailsProduct = false;
-  @Output() onShowDetails = new EventEmitter<{ index: number, product: Product}>()
+  @Output() onShowDetails = new EventEmitter<Product>()
 
   ngOnInit(): void {
     this.initData();
@@ -20,9 +20,9 @@ export class ProductsComponent implements OnInit {
   }
 
 
-  showDetails(index: number, product: Product) {
+  showDetails(product: Product) {
     this.showDetailsProduct = true;
-    this.onShowDetails.emit({ index, product })
+    this.onShowDetails.emit(product)
   }
 
   initData() {
@@ -50,6 +50,7 @@ export class ProductsComponent implements OnInit {
           back: [
             'NestJs Framework',
             'Mongodb Database',
+            'Mongoose ORM'
           ]
         }
       },
