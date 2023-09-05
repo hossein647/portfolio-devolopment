@@ -1,0 +1,22 @@
+.bg-first {
+    background: #cb2d3e;
+    background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);
+    background: linear-gradient(to right, #ef473a, #cb2d3e);
+}
+
+.bg-second {
+    background: #56ab2f;
+    background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);
+    background: linear-gradient(to right, #a8e063, #56ab2f);
+}
+
+.bg-third {
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
+    background: linear-gradient(to right, #a044ff, #6a3093);
+}
+
+
+.reference .icons {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(80deg) brightness(104%) contrast(102%);
+}

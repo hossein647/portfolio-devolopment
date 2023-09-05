@@ -1,0 +1,36 @@
+<div class="profile w-full min-h-full flex flex-col justify-center items-center absolute z-[60]">
+    <img 
+        src="./../../assets/img/admin-panel.png" 
+        class=" w-48 h-48 rounded-full border-2 border-white p-1">
+    <h1 class="text-white text-3xl mt-5 font-bold">حسین نجاتی</h1>
+    <div class="contact-social-network flex mt-3">
+        <a 
+            class="hover:scale-125 hover:cursor-pointer transition-transform duration-300 ease-in-out"
+            href="https://stackoverflow.com/users/12677253/hossein">
+            <img 
+                src="./../../assets/img/stack-overflow.svg" 
+                alt=""
+                class="w-12 h-12 p-3"
+            >
+        </a>    
+        <a 
+            class="hover:scale-125 hover:cursor-pointer transition-transform duration-300 ease-in-out"
+            href="https://github.com/hossein647">
+            <img 
+                src="./../../assets/img/github.svg" 
+                alt=""
+                class="w-12 h-12 p-3"
+            >
+        </a>
+        <a 
+            class="hover:scale-125 hover:cursor-pointer transition-transform duration-300 ease-in-out"
+            (click)="phoneClicked(phone)">
+            <img 
+                src="./../../assets/img/phone-solid.svg" 
+                alt=""
+                class="w-12 h-12 p-3"
+            #phone>
+        </a>
+    </div>
+</div>
+<div class="overlay absolute left-0 right-0 top-0 bottom-0 bg-black z-10 opacity-30"></div>

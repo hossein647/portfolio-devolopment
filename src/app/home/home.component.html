@@ -1,0 +1,26 @@
+<div 
+    class="min-h-screen flex w-full relative" 
+    [ngClass]="{'bg-[#efefef] justify-center': showDetailsProduct}">
+    <div 
+        class="products w-1/2 absolute top-0 bottom-0 right-0"
+        *ngIf="!showDetailsProduct"
+        [ngClass]="{'translate-x-full transition-transform duration-400 ease-in-out': showDetailsProduct}">
+        <app-products (onShowDetails)="onShowDetails($event)"></app-products>
+    </div>
+    <div 
+        class="profile w-1/2 bg-jungle-img bg-no-repeat bg-cover absolute bottom-0 left-0 top-0"
+        *ngIf="!showDetailsProduct"
+        [ngClass]="{'-translate-x-full transition-transform duration-400 ease-in-out': showDetailsProduct}">
+        <app-profile></app-profile>
+    </div>
+    <div 
+        class="
+            details 
+            w-1/2 calc(min-h-screen-96px) 
+            bg-white shadow-lg
+            m-24
+            rounded-md"
+        *ngIf="showDetailsProduct">
+        <app-details-product></app-details-product>
+    </div>
+</div>
