@@ -10,7 +10,7 @@ import { Product } from '../_interfaces/prodoct.interface';
 export class HomeComponent {
 
   showDetailsProduct = false;
-  details: { index: number, procuct: Product };
+  product: Product;
   
   constructor() { }
 
@@ -20,7 +20,8 @@ export class HomeComponent {
   }
 
 
-  onShowDetails(event: { index: number, product: Product}) {
+  onShowDetails(product: Product) {
+    this.product = product;
     this.showDetailsProduct = true
   }
   
