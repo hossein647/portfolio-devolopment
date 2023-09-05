@@ -31,6 +31,7 @@ export class ProductsComponent implements OnInit {
         title: 'سفارش غذا',
         color: 'bg-first',
         years:'1400-1401',
+        src: './../../assets/img/order-food.png',
         feature: [
           'سیستم رزرو و نمایش غذای ویژه هر رستوران در صفحه اول',
           'ادمین پنل مخصوص مدیران رستوران',
@@ -58,6 +59,7 @@ export class ProductsComponent implements OnInit {
         title: 'ادمین پنل (تجاری)',
         color: 'bg-second',
         years:'',
+        src: './../../assets/img/admin-panel.png',
         feature: [],
         technology: {
           front: [
@@ -70,6 +72,7 @@ export class ProductsComponent implements OnInit {
         title: 'بلاگ برنامه نویسی',
         color: 'bg-third',
         years:'',
+        src: './../../assets/img/olivier-guillard-FKJgBUDoVC0-unsplash.jpg',
         feature: [],
         technology: {
           front: [
