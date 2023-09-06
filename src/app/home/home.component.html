@@ -1,6 +1,9 @@
 <div 
-    class="h-full lg:h-screen flex flex-col lg:flex-row w-full relative" 
-    [ngClass]="{'bg-[#efefef] justify-center': showDetailsProduct}">
+    class="h-auto lg:h-screen flex lg:flex-row w-full relative" 
+    [ngClass]="{
+                'bg-[#efefef] justify-center flex-col-reverse': showDetailsProduct,
+                'flex-col-reverse': !showDetailsProduct
+            }">
     <div 
         class="
             products 
@@ -26,13 +29,28 @@
             bg-white shadow-lg
             m-12
             rounded-md
-            overflow-auto lg:overflow-hidden
             transition-all delay-100"
+            [ngClass]="{'absolute top-0 left-0 h-[calc(100vh-7rem)] overflow-auto lg:overflow-hidden lg:static lg:h-auto': showDetailsProduct}"
             *ngIf="showDetailsProduct">
         <app-details-product 
                             [product]="product"
                             [showDetailsProduct]="showDetailsProduct"
                             (OnshowDetailsProduct)="showDetailsProduct = false">
         </app-details-product>
+    </div>
+    <div 
+        class="
+                 bg-white rounded-full p-4
+                absolute left-5 z-[75]
+                hover:scale-110 transition-transform duration-300 ease-in-out"
+        *ngIf="!showDetailsProduct"
+        [ngClass]="showArrowBottom ? 'bottom-[calc(100vh-(-3rem))]' : 'bottom-12'"
+        (click)="gotToPositonScroll()">
+        <img 
+            [src]="
+                    showArrowBottom 
+                        ? './../../assets/img/arrow-down-solid.svg' 
+                        : './../../assets/img/arrow-up-solid.svg'"
+                    class="arrow-down w-12 h-12">
     </div>
 </div>
