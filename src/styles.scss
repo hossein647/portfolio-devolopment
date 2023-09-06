@@ -4,12 +4,12 @@
 @tailwind utilities;
 
 html, body {
-    // overflow-x: hidden;
-    // overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
     min-height: 100%;
     direction: rtl;
+    overflow-x: hidden;
     font-family: vazirmatn;
 }
