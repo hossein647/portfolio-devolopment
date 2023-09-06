@@ -16,4 +16,9 @@ export class DetailsProductComponent implements OnInit {
   ngOnInit() {
 
   }
+
+  onCancel() {
+    this.OnshowDetailsProduct.emit(false);
+    document.body.style.overflowY = 'unset';
+  }
 }
