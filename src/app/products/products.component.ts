@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit {
 
   showDetails(product: Product) {
     this.showDetailsProduct = true;
-    this.onShowDetails.emit(product)
+    this.onShowDetails.emit(product);
   }
 
   initData() {
