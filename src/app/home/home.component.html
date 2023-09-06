@@ -1,26 +1,38 @@
 <div 
-    class="min-h-screen flex w-full relative" 
+    class="h-screen flex flex-col lg:flex-row w-full lg:relative" 
     [ngClass]="{'bg-[#efefef] justify-center': showDetailsProduct}">
     <div 
-        class="products w-1/2 absolute top-0 bottom-0 right-0"
-        *ngIf="!showDetailsProduct"
-        [ngClass]="{'translate-x-full transition-transform duration-400 ease-in-out': showDetailsProduct}">
+        class="
+            products 
+            w-full lg:w-1/2 lg:absolute lg:top-0 lg:bottom-0 lg:right-0 z-[60] 
+            transition-transform duration-1000 ease-in-out"
+        [ngClass]="{'translate-x-full': showDetailsProduct, 'translate-x-0': !showDetailsProduct}">
         <app-products (onShowDetails)="onShowDetails($event)"></app-products>
     </div>
     <div 
-        class="profile w-1/2 bg-jungle-img bg-no-repeat bg-cover absolute bottom-0 left-0 top-0"
-        *ngIf="!showDetailsProduct"
-        [ngClass]="{'-translate-x-full transition-transform duration-400 ease-in-out': showDetailsProduct}">
+        class="
+            profile
+            w-full lg:w-1/2 lg:bottom-0 lg:left-0 lg:top-0 z-[60]
+            bg-jungle-img bg-no-repeat bg-cover 
+            lg:absolute
+            transition-transform duration-1000 ease-in-out"
+        [ngClass]="{'-translate-x-full ': showDetailsProduct, '-translate-x-0': !showDetailsProduct}">
         <app-profile></app-profile>
     </div>
     <div 
         class="
-            details 
-            w-1/2 calc(min-h-screen-96px) 
+            details
+            w-3/4
             bg-white shadow-lg
-            m-24
-            rounded-md"
-        *ngIf="showDetailsProduct">
-        <app-details-product [product]="product"></app-details-product>
+            m-12
+            rounded-md
+            overflow-auto lg:overflow-hidden
+            transition-all delay-100"
+            *ngIf="showDetailsProduct">
+        <app-details-product 
+                            [product]="product"
+                            [showDetailsProduct]="showDetailsProduct"
+                            (OnshowDetailsProduct)="showDetailsProduct = false">
+        </app-details-product>
     </div>
 </div>

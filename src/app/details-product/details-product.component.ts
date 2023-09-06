@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../_interfaces/prodoct.interface';
 
 @Component({
@@ -9,6 +9,8 @@ import { Product } from '../_interfaces/prodoct.interface';
 export class DetailsProductComponent implements OnInit {
 
   @Input({ required: true }) product: Product;
+  @Input({ required: true }) showDetailsProduct: boolean;
+  @Output() OnshowDetailsProduct = new EventEmitter<boolean>();
 
 
   ngOnInit() {

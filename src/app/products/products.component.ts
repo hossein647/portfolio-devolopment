@@ -38,13 +38,13 @@ export class ProductsComponent implements OnInit {
           'ادمین پنل مخصوص مشتریان',
           'ادمین پنل مخصوص مدیریت سایت',
           'سیستم آپلود تصاویر',
-          'سیستم ایجاد دسته بندی دلخواه مخصوص هر رستوران',
+          'سیستم ایجاد دسته بندی دلخواه مخصوص انواع رستوران',
         ],
         technology: {
           front: [
             'Angular',
             'RxJs',
-            'Akita StateManagment',
+            'Akita State Managment',
             'Angular Material',
             'Tailwind css'
           ],
