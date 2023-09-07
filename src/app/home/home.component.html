@@ -43,11 +43,11 @@
                 absolute left-8 z-[75]
                 hover:scale-110 transition-transform duration-300 ease-in-out"
         *ngIf="!showDetailsProduct"
-        [ngClass]="showArrowBottom ? 'bottom-[calc(100vh-(-5rem))]' : 'bottom-12'"
+        [ngClass]="showArrowDown ? 'bottom-[calc(100vh-(-5rem))]' : 'bottom-12'"
         (click)="gotToPositonScroll()">
         <img 
             [src]="
-                    showArrowBottom 
+                    showArrowDown 
                         ? './../../assets/img/arrow-down-solid.svg' 
                         : './../../assets/img/arrow-up-solid.svg'"
                     class="arrow-down w-8 h-8">

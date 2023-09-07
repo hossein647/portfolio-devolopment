@@ -12,17 +12,13 @@ export class HomeComponent {
   showDetailsProduct = false;
   product: Product;
   scrollHeight: number;
-  showArrowBottom: boolean;
+  showArrowDown = true;
   
   constructor() { }
 
 
   ngOnInit(): void {
-    console.log(document.documentElement.scrollTop);
-    console.log(window.pageYOffset, window.screenY, document.body.scrollHeight, document.documentElement.scrollHeight);
     this.scrollHeight = document.body.scrollHeight || document.documentElement.scrollHeight
-    if (window.pageXOffset > 50 || window.scrollY > 50) this.showArrowBottom = false;
-    else this.showArrowBottom = true;
   }
 
 
@@ -35,17 +31,14 @@ export class HomeComponent {
 
   @HostListener("window:scroll", ["$event"])
   onWindowScroll(event: any) {
-    console.log(window.scrollY);
-    if (window.pageXOffset > 50 || window.scrollY > 50) {
-      this.showArrowBottom = false;
-    } else {
-      this.showArrowBottom = true;
-    }
+    const scrollToTop = window.pageXOffset > 350 || window.scrollY > 35;
+    if (scrollToTop) this.showArrowDown = false;
+    else this.showArrowDown = true;
   }
 
 
   gotToPositonScroll() {
-    if (this.showArrowBottom) window.scrollTo(0, this.scrollHeight);
+    if (this.showArrowDown) window.scrollTo(0, this.scrollHeight);
     else window.scrollTo(0, 0);
   }
 }
