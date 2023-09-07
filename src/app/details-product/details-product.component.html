@@ -9,6 +9,11 @@
             <h1 class="title text-[2.5rem] font-black text-center text-gray-600">
                 {{ product.title }}
             </h1>
+            <div class="short-description text-gray-600 font-semibold mt-[6px]">
+                <small>{{product.shortDescription}}</small>
+                <small class="mx-2 inline-block">|</small>
+                <small>{{product.years}}</small>
+            </div>
             <div class="reference flex w-full px-4 flex-col md:flex-row sm:px-20 md:px-0 md:justify-center mt-8">
                 <a 
                     class="
