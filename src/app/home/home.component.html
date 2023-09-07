@@ -25,12 +25,11 @@
     <div 
         class="
             details
-            w-3/4
-            bg-white shadow-lg
-            m-12
-            rounded-md
+            w-full h-full bg-white shadow-lg rounded-md absolute top-0 left-0 bottom-0 right-0 overflow-auto
+            md:w-11/12 lg:w-3/4 md:m-auto lg:md:m-12
+            md:h-[calc(100vh-7rem)]  lg:overflow-hidden lg:static lg:h-auto
             transition-all delay-100"
-            [ngClass]="{'absolute top-0 left-0 h-[calc(100vh-7rem)] overflow-auto lg:overflow-hidden lg:static lg:h-auto': showDetailsProduct}"
+            [ngClass]="{'': showDetailsProduct}"
             *ngIf="showDetailsProduct">
         <app-details-product 
                             [product]="product"
