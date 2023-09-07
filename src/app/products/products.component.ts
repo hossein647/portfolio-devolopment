@@ -50,33 +50,43 @@ export class ProductsComponent implements OnInit {
           ],
           back: [
             'NestJs Framework',
-            'Mongodb Database',
-            'Mongoose ORM'
+            'Mongodb Database'
           ]
         }
       },
       {
-        title: 'ادمین پنل (تجاری)',
+        title: 'ادمین پنل (مشتری)',
         color: 'bg-second',
-        years:'',
+        years:'1401',
         src: './../../assets/img/admin-panel.png',
-        feature: [],
+        feature: [
+          'کار با api آمازون (AWS S3) بر بستر سرویس لیارا',
+          'سیستم آپلود و دانلود فایل',
+          'سیستم احراز هویت کاربران با SMS',
+          'سیستم اتصال و پرداخت درگاه بانکی'
+        ],
         technology: {
           front: [
-
+            'Angular',
+            'RxJs',
+            'Prime Ng'
           ],
-          back: []
+          back: [
+            'NestJs Framwork',
+            'Mongodb Database'
+          ]
         }
       },
       {
         title: 'بلاگ برنامه نویسی',
         color: 'bg-third',
-        years:'',
+        years:'1402',
         src: './../../assets/img/olivier-guillard-FKJgBUDoVC0-unsplash.jpg',
         feature: [],
         technology: {
           front: [
-
+            'Angular',
+            'Tailwind'
           ],
           back: []
         }
