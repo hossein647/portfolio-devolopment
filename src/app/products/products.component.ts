@@ -30,7 +30,10 @@ export class ProductsComponent implements OnInit {
       {
         title: 'سفارش غذا',
         color: 'bg-first',
-        years:'1400-1401',
+        years:'1401-1400',
+        shortDescription: 'وب اپلیکیشن خرید و فروش غذا',
+        demo: 'https://order-food.nejaty.ir',
+        github: 'https://github.com/hossein647/shopping-food-front-development',
         src: './../../assets/img/order-food.png',
         feature: [
           'سیستم رزرو و نمایش غذای ویژه هر رستوران در صفحه اول',
@@ -58,6 +61,9 @@ export class ProductsComponent implements OnInit {
         title: 'ادمین پنل (مشتری)',
         color: 'bg-second',
         years:'1401',
+        shortDescription: 'پیاده سازی بخش بکند و پنل مدیریت اپلیکیشن موبایل قرآن',
+        demo: 'https://kh-adminpanel.nejaty.ir',
+        github: 'https://github.com/hossein647/administrator.kh.development.git',
         src: './../../assets/img/admin-panel.png',
         feature: [
           'کار با api آمازون (AWS S3) بر بستر سرویس لیارا',
@@ -81,6 +87,9 @@ export class ProductsComponent implements OnInit {
         title: 'بلاگ برنامه نویسی',
         color: 'bg-third',
         years:'1402',
+        shortDescription: 'مکانی برای انتشار دانش و معلومات حوزه فرانت (در حال توسعه)',
+        demo: 'codecov.ir',
+        github: '',
         src: './../../assets/img/olivier-guillard-FKJgBUDoVC0-unsplash.jpg',
         feature: [],
         technology: {
