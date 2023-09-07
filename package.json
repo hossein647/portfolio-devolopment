@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "deploy": "ng build && copy .htaccess .\\dist\\ && cd .\\dist && git init && git add . && git commit -m \"new build\" && git remote add origin https://github.com/hossein647/portfolio.git && git push --force --set-upstream origin master",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
