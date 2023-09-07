@@ -9,7 +9,7 @@
             <h1 class="title text-[2.5rem] font-black text-center text-gray-600">
                 {{ product.title }}
             </h1>
-            <div class="short-description text-gray-600 font-semibold mt-[6px]">
+            <div class="short-description text-gray-600 font-semibold mt-1">
                 <small>{{product.shortDescription}}</small>
                 <small class="mx-2 inline-block">|</small>
                 <small>{{product.years}}</small>
@@ -23,7 +23,8 @@
                         md:ml-[3px] md:w-[124px] w-full
                         hover:cursor-pointer hover:bg-gray-600
                         transition-all duration-300 ease-in-out text-center"
-                        [href]="product.github">
+                        [href]="product.github"
+                        target="_blank">
                     گیت هاب
                 </a>
                 <a class="
@@ -33,7 +34,8 @@
                     md:mr-[3px] md:w-[124px] w-full
                     hover:cursor-pointer hover:bg-green-600
                     transition-all duration-300 ease-in-out text-center"
-                    [href]="product.demo">
+                    [href]="product.demo"
+                    target="_blank">
                     پیش نمایش
                 </a>
             </div>
