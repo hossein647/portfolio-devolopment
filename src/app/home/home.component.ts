@@ -25,7 +25,6 @@ export class HomeComponent {
   onShowDetails(product: Product) {
     this.product = product;
     this.showDetailsProduct = true;
-    document.body.style.overflowY = 'hidden';
   }
   
 
@@ -38,7 +37,6 @@ export class HomeComponent {
 
 
   gotToPositonScroll() {
-    if (this.showArrowDown) window.scrollTo(0, this.scrollHeight);
-    else window.scrollTo(0, 0);
+    this.showArrowDown = !this.showArrowDown;
   }
 }
