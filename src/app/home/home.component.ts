@@ -25,6 +25,9 @@ export class HomeComponent {
   onShowDetails(product: Product) {
     this.product = product;
     this.showDetailsProduct = true;
+    setTimeout(() => {
+      this.showArrowDown = true;
+    }, 1000);
   }
   
 

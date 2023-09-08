@@ -13,7 +13,8 @@
                 'translate-x-0': !showDetailsProduct,
                 'translate-y-full': showArrowDown,
                 'translate-y-0': !showArrowDown
-            }">
+            }"
+            #products>
         <app-products (onShowDetails)="onShowDetails($event)"></app-products>
     </div>
     <div 
@@ -25,8 +26,10 @@
         [ngClass]="{
                 'translate-x-full lg:-translate-x-full': showDetailsProduct, 
                 'translate-x-0': !showDetailsProduct,
-                '-translate-y-full': !showArrowDown
-            }">
+                '-translate-y-full': !showArrowDown,
+                '-translate-y-0': showArrowDown,
+            }"
+            #profile>
         <app-profile></app-profile>
     </div>
     <div 
