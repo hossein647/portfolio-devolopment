@@ -13,19 +13,21 @@
         #productsElement>
         <div class="
                 previews absolute w-96 h-96 
-                border-[4px] rounded-full  
+                sm:border-[4px] rounded-full  
                 -top-40 -left-32 z-50 overflow-hidden">
             <div 
                 class="w-full h-full bg-contain" 
                 [ngClass]="{
-                            'bg-order-food-img': i === 0,
-                            'bg-admin-panel-img': i === 1,
-                            'bg-cat-img': i === 2
+                            'sm:bg-order-food-img': i === 0,
+                            'sm:bg-admin-panel-img': i === 1,
+                            'sm:bg-cat-img': i === 2
                         }">
             </div>
         </div>
-        <div class="description p-8 pt-16 absolute -top-8 right-0 z-50">
-            <h1 class="title text-4xl text-white font-bold">{{product.title}}</h1>
+        <div class="description flex justify-center items-center h-full sm:h-auto sm:p-8 sm:pt-16 sm:absolute -top-8 right-0 z-50">
+            <h1 class="title text-5xl sm:text-4xl text-center sm:text-right leading-normal text-white font-bold">
+                {{product.title}}
+            </h1>
         </div>
         <div class="overlay absolute left-0 right-0 top-0 bottom-0 bg-black z-[51] opacity-10 hover:opacity-0"></div>
     </div>
